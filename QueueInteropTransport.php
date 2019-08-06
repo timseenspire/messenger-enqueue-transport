@@ -53,6 +53,7 @@ class QueueInteropTransport implements TransportInterface
 
         $resolver = new OptionsResolver();
         $this->configureOptions($resolver);
+        unset($options['transport_name']);
         $this->options = $resolver->resolve($options);
     }
 
